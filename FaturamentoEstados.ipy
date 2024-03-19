@@ -1,0 +1,17 @@
+
+faturamento_estados = {
+    'SP': 67836.43,
+    'RJ': 36678.66,
+    'MG': 29229.88,
+    'ES': 27165.48,
+    'Outros': 19849.53
+}
+
+total_mensal = 0
+
+for estado in faturamento_estados:
+    total_mensal += faturamento_estados[estado]
+
+for estado in faturamento_estados:
+    percentual = (faturamento_estados[estado] / total_mensal) * 100
+    print(f'O estado {estado} teve um percentual de {percentual:.2f}% no faturamento total mensal.')
