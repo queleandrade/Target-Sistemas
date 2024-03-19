@@ -1,0 +1,28 @@
+faturamento_diario = [10000, 15000, 20000, 30000, 25000, 18000, 22000, 40000, 35000, 28000]
+
+menor_valor = float('inf')
+maior_valor = float('-inf')
+
+soma_faturamento = 0
+dias_acima_media = 0
+
+for valor in faturamento_diario:
+    if valor < menor_valor:
+        menor_valor = valor
+    
+    if valor > maior_valor:
+        maior_valor = valor
+
+    soma_faturamento += valor
+
+media_mensal = soma_faturamento / len(faturamento_diario)
+
+for valor in faturamento_diario:
+    if valor > media_mensal:
+        dias_acima_media += 1
+
+
+print(f'O menor valor de faturamento foi: R${menor_valor}')
+print(f'O maior valor de faturamento foi: R${maior_valor}')
+print(f'O número de dias com faturamento acima da média foi: {dias_acima_media} dias')
+
